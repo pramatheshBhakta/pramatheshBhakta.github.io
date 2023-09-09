@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function startMarquee() {
+    document.getElementById('imageMarquee').scrollAmount = 12;
+}
+
+function stopMarquee() {
+    document.getElementById('imageMarquee').scrollAmount = 0;
+}
+
+        let scrollInterval;
+
+function startAutoScroll() {
+    scrollInterval = setInterval(() => {
+        plusSlides(1);
+    }, 5000); // Change image every 5 seconds
+}
+
+function stopAutoScroll() {
+    clearInterval(scrollInterval);
+}
+
+// Start auto scrolling on page load
+startAutoScroll();
+
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Function to handle automatic sliding
+function autoSlide() {
+    plusSlides(1);
+    setTimeout(autoSlide, 5000); // Change slide every 5 seconds
+}
+
+// Start automatic sliding
+autoSlide();
+
+// Rest of your existing code...
+
+// Modify the existing showSlides function
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+// Rest of your existing code...
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Digi Attendance</title>
+    <link rel="icon" type="image/jpg" sizes="32x32" href="images/add.jpg">
+    
+</head>
+<body style="background-color: black;">
+    <header>
+        <div class="navi">
+        <nav id="my-nav" style="color: wheat; background-color: brown;">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+    <div class="headdigi">
+        <h1 style="padding-top: 200px;">Welcome to DIGI-ATTENDANCE</h1>
+   
+    <p>Attendance At Your Finger Tip</p>
+    <br>
+    <a href="https://play.google.com/store/apps/details?id=DIGI-ATTENDANCE" target="_blank">
+        <button class="download-button">Download from Google Play</button>
+    </a>
+</div>
+    </header>
+
+    <section style="background-color: brown; max-height: 1px;">
+
+    </section>
+    <section id="features" style="background-image:url('images/bg1.jpg'); background-size: contain;">
+        <center><h2>Features</h2></center>
+        <br><br><br>
+        <!-- Add your menu items here -->
+        <div class="feature-panel">
+            <div class="panel-content">
+                <img src="images/33.jpg" alt="Spherical Image 1">
+                <p>Multi User Support</p>
+            </div>
+        </div>
+        <div class="feature-panel">
+            <div class="panel-content">
+                <img src="images/1.jpg" alt="Spherical Image 2">
+                <p>Individual Student Dashboard</p>
+            </div>
+        </div>
+        <div class="feature-panel">
+            <div class="panel-content">
+                <img src="images/2.jpg" alt="Spherical Image 3">
+                <p>Simple and Time Efficient Attendance System</p>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: brown; max-height: 5px;">
+
+    </section><section id="gallery">
+
+        <marquee class="marq"
+        bgcolor="gray"
+        direction="left"
+        scrollamount="25"
+        loop="0">
+        
+        <div class="slideshow-container" onmouseenter="stopAutoScroll(); stopMarquee()" onmouseleave="startAutoScroll(); startMarquee()">
+            <!-- Slide 1 -->
+            <div class="mySlides">
+                <div class="slide-panel" style="background-color: black; color: white;">
+                    <p>----MORE ABOUT ME-- </p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/11.jpg" alt="Image 1">
+                </div>
+            </div>
+    
+            <!-- Slide 2 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/12.jpg" alt="Image 2">
+                </div>
+            </div>
+    
+            <!-- Slide 3 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/13.jpg" alt="Image 3">
+                </div>
+            </div>
+    
+            <!-- Slide 4 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/14.jpg" alt="Image 4">
+                </div>
+            </div>
+    
+            <!-- Slide 5 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/15.jpg" alt="Image 5">
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/16.jpg" alt="Image 4">
+                </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/17.jpg" alt="Image 4">
+                </div>
+            </div>
+            <!-- Slide 8 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/18.jpg" alt="Image 4">
+                </div>
+            </div>
+            <!-- Slide 9 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/19.jpg" alt="Image 4">
+                </div>
+            </div>
+            <!-- Slide 10 -->
+            <div class="mySlides">
+                <div class="slide-panel">
+                    <img src="images/20.jpg" alt="Image 4">
+                </div>
+            </div>
+           
+        </div>
+    
+       </marquee>
+    </section>
+    
+    <section style="background-color: brown; max-height: 5px;">
+
+    </section>
+    
+
+    <section id="contact" style="background-color: black; color: aliceblue;">
+        <h2 >Contact Us</h2>
+        <p>Contact us for APP inquiries:</p>
+        <address>
+            Email: <a href="pram.bhaks@gmail.com">pram.bhaks@gmail.com</a><br>
+            Phone: <a href="tel:8197919389">8197919389</a><br>
+            Address: St Joseph Engineering College
+        </address>
+    </section>
+    <footer>
+        <p>&copy;Pramathesh</p>
+    </footer>
+</body>
+</html>

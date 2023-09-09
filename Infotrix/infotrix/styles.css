@@ -1,0 +1,355 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+/* Add these CSS styles to your existing CSS file */
+
+/* Slideshow Gallery */
+#gallery {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#gallery .slideshow-container {
+    max-width: 100%;
+    
+    position: relative;
+    white-space: nowrap;
+}
+
+#gallery .mySlides {
+    display: none;
+    vertical-align: top;
+    transition: transform 0.5s ease;
+    width: 400px;
+    height: 300px;
+    margin: 0 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+#gallery .mySlides:hover {
+    transform: scale(1.05);
+}
+
+#gallery .slide-panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+#gallery .slide-panel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#gallery .dot-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#gallery .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+#gallery .dot:hover {
+    background-color: #717171;
+}
+
+/* Add this class to the slideshow container when auto-scrolling */
+.auto-scroll .slideshow-container {
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    45% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    95% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+.navi {
+    background-color: #ff4500;
+    color: blue;
+}
+* {box-sizing:border-box}
+
+
+
+
+
+
+.headdigi{
+    position: relative;
+    padding-left: 400px;
+    padding-top: 80px;
+    
+
+}
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background color */
+    color: #fff; /* White text color */
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  .download-button:hover {
+    background-color: #45a049; 
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+#features {
+    background-color: gray;
+    text-align: center;
+    padding: 20px 0;
+    white-space: nowrap; /* Prevent line breaks within the section */
+    overflow-x: auto; /* Add horizontal scrolling if necessary */
+}
+
+#features h2 {
+    background-color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Center the title */
+    display: inline-block; /* Make the title behave as a block element */
+}
+/* Add these CSS styles to your existing CSS file */
+/* Add these CSS styles to your existing CSS file */
+
+/* Slideshow container */
+/* #gallery .slideshow-container {
+    max-width: 100%;
+   
+    position: relative;
+    white-space: nowrap;
+} */
+
+/* Individual slide panel */
+#gallery .mySlides {
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.5s ease;
+    width: 400px;
+    height: 300px;
+    margin: 0 10px; /* Add spacing between panels */
+    border: 2px solid black; /* Add black border to panels */
+    box-sizing: border-box;
+}
+
+/* Highlight slide panel on hover */
+/* #gallery .mySlides:hover {
+    transform: scale(1.05);
+} */
+
+/* Panel content */
+#gallery .slide-panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+/* Images inside panels */
+#gallery .slide-panel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Dots */
+#gallery .dot-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#gallery .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+#gallery .dot:hover {
+    background-color: #717171;
+}
+
+#features h2:hover {
+    background-color: black;
+    color: #f7f7f7
+}   /* Add CSS for the gallery section */#gallery {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.feature-panel {
+    background-color: white;
+    border: 8px solid orange;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    width: 20%; /* Set a fixed width for each panel */
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    display: inline-block; /* Display the panels side by side */
+    vertical-align: top; /* Align the panels to the top of the line */
+}
+
+.feature-panel:hover {
+    transform: scale(1.1);
+}
+
+.panel-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-panel img {
+    max-height: 20%;
+    max-width: 40%;
+    /* border-radius: 50%; */
+}
+
+.feature-panel p {
+    margin-top: 10px;
+}
+
+
+/* Add more styles as needed */
+
+header {
+    background-image:url("images/bg3.jpg");/* Replace with your image */
+        /* background-size: cover; */
+        max-height: 700px;
+       
+        text-align: center;
+        padding-bottom: 400px;
+        color: #fff;
+}
+#my-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: brown;
+    color: wheat;
+    padding: 10px 0; /* Add padding for better spacing */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+#my-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Make the list items horizontal */
+    justify-content: center; /* Center the list items horizontally */
+}
+#my-nav li {
+    margin: 0 20px; /* Add space between list items */
+}
+#my-nav a {
+    text-decoration: none;
+    color: wheat;
+}
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4500;
+}
+
+section {
+    padding: 40px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
